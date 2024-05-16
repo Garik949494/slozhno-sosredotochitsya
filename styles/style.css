@@ -8,19 +8,17 @@
   background-attachment: fixed;
   color: var(--text-color);
   transition-duration: var(--transition-duration);
+  background-size: cover;
 }
 
 
 .header {
   padding: 0 20px;
   position: relative;
+  min-block-size: 100vh;
+  min-height: 668px;
 }
 
-@media (width < 768) and (width >= 375) {
-  .header {
-    padding: 0 10px;
-  }
-}
 
 .header__theme-menu {
   padding-top: 20px;
@@ -64,11 +62,12 @@
 }
 
 .header__theme-menu-button:hover {
-  border: var(--hover-color);
+  outline: var(--hover-color);
 }
 
 .header__theme-menu-button:focus {
   border: none;
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -76,7 +75,8 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid;
+  outline: 1px solid;
+  pointer-events: none;
 }
 
 .header__bigTitle {
@@ -84,7 +84,7 @@
   font-weight: 700;
   margin-left: -2%;
   color: var(--title-color);
-  text-shadow: 4px 4px 0px var(--bigTitle-shadow);
+  text-shadow: 4px 4px 0px var(--bigtitle-shadow);
 }
 
 .header__title-container {
@@ -132,17 +132,16 @@
   color: var(--article-title-color);
   align-self: flex-end;
   font-weight: 700;
-  width: 491px;
-  height: 71px;
-
+  max-inline-size: 491px;
+  
   font-size: 18px;
   line-height: 23px;
 }
 
-@media (width < 768px) {
+@media (width <= 768px) {
   .header__subtitle {
-    Width:364px;
-    Height:117px;
+    max-width:100%;
+    width:50%;
   }
 }
 
@@ -151,6 +150,13 @@
     width: 100%;
   }
 }
+
+@media (width < 768) and (width >= 375) {
+  .header {
+    padding: 0 10px;
+  }
+}
+ 
 
 .titleQuestion {
   margin-bottom: 20px;
@@ -219,7 +225,7 @@
 
 .section:first-of-type .titleQuestion, .section:nth-of-type(3) .titleQuestion {
   flex: 0 0 auto;
-  width: 33%;
+  width: 315px;
 }
 
 @media (width < 1024px) and (width >= 768px) {
@@ -244,7 +250,7 @@
 }
 
 .section:first-of-type .titleQuestion, .section:nth-of-type(2) .titleQuestion {
-  width: 33%;
+  width: 315px;
 }
 
 .section-what__articles-list {
@@ -260,7 +266,7 @@
 }
 
 .section:first-of-type .titleQuestion, .section:nth-of-type(3) .titleQuestion {
-  width: 33%;
+  width: 315px;
 }
 
 .section:nth-of-type(3) .section__article-list {
@@ -274,9 +280,37 @@
   gap: 20px;
 }
 
+@media (width < 768px) and (width >= 375px) {
+  .section:first-of-type .titleQuestion, .section:nth-of-type(3) .titleQuestion {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .section:first-of-type .titleQuestion, .section:nth-of-type(2) .titleQuestion {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .section:first-of-type .section__article-list, .section:nth-of-type(3) .section__article-list {
+      width: 100%;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .section:first-of-type .articles-list, .section:nth-of-type(3) .section__article-list {
+      width: 100%;
+  }
+}
+
+
+
 .textShadow-link {
-  border: transparent;
-  text-shadow: 3px 3px 0px var(--link-shadow);
+  outline: transparent;
+  text-shadow: 2px 2px 0px var(--link-shadow);
 }
 
 .GridSection .section__image {
@@ -315,11 +349,15 @@
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   color: var(--title-color);
-  text-shadow: 2px 2px 0px var(--bigTitle-shadow);
+  text-shadow: 2px 2px 0px var(--bigtitle-shadow);
 }
 
 .footer {
-  padding: 282px 20px;
+  /*height: 100vh; */
+  min-height: 768px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   text-align: center;
 }
@@ -332,20 +370,14 @@
 
 
 
-@media (width < 1024px) and (width >= 768px) {
-  .footer {
-    padding: 434px 20px;
-  }
-}
+
 
 @media (width < 768px) and (width >= 375px) {
   .footer {
-    margin-top: 40px;
-    padding: 262px 10px;
+    padding-left:  10px;
+    padding-right: 10px;
   }
 }
-
-
 
 .decorated-zone::before {
   content: "";
@@ -358,7 +390,7 @@
   bottom: 20px;
 }
 
-.Corner__rec {
+.header__rec {
   position: absolute;
   color: var(--rec-color);
   text-transform: uppercase;
@@ -366,7 +398,7 @@
   right: 50px;
 }
 
-.Corner__rec::after {
+.header__rec::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -411,3 +443,4 @@
     
   }
 }
+
