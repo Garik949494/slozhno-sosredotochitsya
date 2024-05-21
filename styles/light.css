@@ -26,3 +26,23 @@
     --titleQuestionColor: var(--text-color)
 
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #353430;
+    --title-color: #ffc2e6;
+    --bigtitle-shadow: #ff0070;
+    --title-blockColor: #ff8dcb;
+    --hover-color: 1px solid rgba(50, 49, 45, 0.4);
+    --background-color: #fff1f7;
+    --background-image: url(../images/cover-image-light.png);
+    --article-title-color: var(--text-color);
+    --section-title-color: var(--text-color);
+    --border-color: var(--bigtitle-shadow);
+    --corners-color: var(--text-color);
+    --link-shadow: var(--title-blockColor);
+    --rec-color: var(--background-color);
+    --titleQuestionColor: var(--text-color)
+
+  }
+}
