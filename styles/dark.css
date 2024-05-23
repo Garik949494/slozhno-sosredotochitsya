@@ -23,7 +23,7 @@
   --title-blockColor: var(--bigtitle-shadow); 
   --link-shadow: var(--bigtitle-shadow);
   --rec-color: var(--bigtitle-shadow);
-  --titleQuestionColor: var(--bigtitle-shadow);
+  --title-questionColor: var(--bigtitle-shadow);
   
 }
 
@@ -42,7 +42,7 @@
   --title-blockColor: var(--bigtitle-shadow);  
   --link-shadow: var(--bigtitle-shadow);
   --rec-color: var(--bigtitle-shadow);
-  --titleQuestionColor: var(--bigtitle-shadow);
+  --title-questionColor: var(--bigtitle-shadow);
   
   }
 }

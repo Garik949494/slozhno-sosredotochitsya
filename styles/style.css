@@ -11,11 +11,16 @@
   background-size: cover;
 }
 
+.title-decor {
+  background: var(--title-blockColor);
+}
+
 .header {
-  padding: 0 20px; 
-  position: relative; 
- min-block-size: 100vh; 
+  padding: 0 20px;
+  position: relative;
+  min-block-size: 668px;
   display: grid;
+  block-size: 100vh;
 }
 
 @media (width < 768px) and (width >= 375px) {
@@ -98,8 +103,6 @@
   gap: 76px; 
 }
 
-
-
 @media (width < 768px) and (width >= 375px) {
   .header__title-container {
     padding: 70px 0 74px;
@@ -168,7 +171,7 @@
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 700;
-  color: var(--titleQuestionColor)
+  color: var(--title-questionColor)
 }
 
 .title-artiqle {
@@ -177,7 +180,7 @@
   color: var(--article-title-color);
 }
 
-.title-artiqle__Lowercase {
+.title-artiqle__lowercase {
   font-weight: 400;
   font-size: 18px;
   color: var(--article-title-color);
@@ -199,7 +202,7 @@
 @media (width < 768px) and (width >= 375px) {
   .main {
     padding: 0 10px;
-    margin: 34px 0;
+    margin: 40px 0;
     gap: 50px;
   }
 }
@@ -377,13 +380,13 @@
 @media (width < 768px) and (width >= 375px) {
   .footer.decorated-zone::before {
       left: 10px;
-      bottom: 7px;
+      bottom: 10px;
   }
 }
 
 @media (width < 768px) and (width >= 375px) {
   .footer.decorated-zone::after {
-    top: 13px;
+    top: 10px;
     right: 10px;
   }
 }
@@ -395,7 +398,9 @@
   align-items: center;
   position: relative;
   text-align: center;
-  min-block-size: 100vh;
+  min-block-size: 668px;
+  padding: 0 20px;
+  block-size: 100vh;
 }
 
 
@@ -404,12 +409,6 @@
   .footer {
     padding-left:  10px;
     padding-right: 10px;
-  }
-}
-
-@media (width < 1024px) and (width >= 768px) {
-  .footer {
-      padding: 434px 20px;
   }
 }
 
@@ -455,7 +454,7 @@
 @media (width < 768px) and (width >= 375px) {
   .decorated-zone::before {
     left: 10px;
-    bottom: 17px;
+    bottom: 10px;
   }
 }
 
@@ -473,11 +472,9 @@
 @media (width < 768px) and (width >= 375px) {
   .decorated-zone::before {
     left: 10px;
-    bottom: 17px;
+    bottom: 10px;
   }
 }
-
-
 
 @media (width < 768px) and (width >= 375px) {
   .decorated-zone::after {

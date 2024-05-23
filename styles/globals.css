@@ -45,7 +45,3 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
-.title-decor {
-  background: var(--title-blockColor);
-}
